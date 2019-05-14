@@ -20,4 +20,4 @@ npm install --save react-navigation
 rm -rf node_modules/@react-navigation/native/node_modules/react-native-safe-area-view/.git
 rm -rf node_modules/react-native-safe-area-view/.git
 react-native link
-mv -r !(.|..|.git|create.sh|$1) $1
+rsync -aP --exclude=.git --exclude=create.sh --exclude=$1 * $1
