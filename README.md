@@ -1,28 +1,28 @@
-#Vue Native Quickstart Template
+# Vue Native Quickstart Template
 
-##Installed Features :
+## Installed Features :
 - Internationalisation / I18n
 - Native Base
 - Stack Navigation (react-navigation 3.0)
 - Sqlites database (sqlite-storage)
 
-##Install 
+## Install 
 `sh create.sh <ProjectName>`
 
-###!!! Android users !!!
+### !!! Android users !!!
 react-native-sqlite-storage must be installed manually, see https://github.com/andpor/react-native-sqlite-storage
 
-##Android execution
+## Android execution
 react-native run-android
 npm start -- --reset-cache
 
-##Android build (unsigned)
+## Android build (unsigned)
 ```sh
 cd android
 ./gradlew assembleRelease
 ```
 
-##tested versions
+## Tested versions
 ```json
 {
   "dependencies": {
