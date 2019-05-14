@@ -21,3 +21,4 @@ rm -rf node_modules/@react-navigation/native/node_modules/react-native-safe-area
 rm -rf node_modules/react-native-safe-area-view/.git
 react-native link
 rsync -aP --exclude=.git --exclude=create.sh --exclude=$1 * $1
+rm $1/App.js
