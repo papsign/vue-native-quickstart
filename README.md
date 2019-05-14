@@ -14,8 +14,10 @@
 react-native-sqlite-storage must be installed manually, see https://github.com/andpor/react-native-sqlite-storage
 
 ## Android execution
+```sh
 react-native run-android
 npm start -- --reset-cache
+```
 
 ## Android build (unsigned)
 ```sh
