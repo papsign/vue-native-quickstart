@@ -1,10 +1,11 @@
 # Vue Native Quickstart Template
 
 ## Installed Features :
+- Vue Native (.vue file support)
 - Internationalisation / I18n
-- Native Base
+- Native Base (with added configurable custom theme)
 - Stack Navigation (react-navigation 3.0)
-- Sqlites database (sqlite-storage)
+- Sqlite database (sqlite-storage)
 
 ## Install 
 `sh create.sh <ProjectName>`
