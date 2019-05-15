@@ -1,1 +1,2 @@
-native-base-theme/* linguist-vendored
+* linguist-vendored
+*.vue linguist-vendored=false
