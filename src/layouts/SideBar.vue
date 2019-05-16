@@ -50,7 +50,7 @@ export default {
           {
               name: this.$t('informations'),
               route: "Infos",
-              icon: "information",
+              icon: "information-circle-outline",
           },
       ],
     }

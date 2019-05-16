@@ -58,7 +58,6 @@ export class Database implements Database {
         const { insertId } = results;
         return(insertId)
       })
-      .catch(e => console.log(e))
   }
 
   // Delete a log

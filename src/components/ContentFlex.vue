@@ -1,5 +1,5 @@
 <template>
-  <nb-content padder :scrollEventThrottle="300" :onScroll="onScroll" :removeClippedSubviews="true" :scrollEnabled="scrollEnabled" >
+  <nb-content :scrollEventThrottle="400" :onScroll="onScroll" :removeClippedSubviews="true" :scrollEnabled="scrollEnabled" >
      <view class="content-wrapper" :onLayout="onLayout">
         <slot></slot>
      </view>

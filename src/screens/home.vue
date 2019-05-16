@@ -21,22 +21,24 @@
       </nb-button>
     </nb-right>
   </nb-header>
-  <nb-content>
+  <safe-area-view style="flex:1">
     <content-flex :onFetchData="onFetchData" :loading="loading" ref="content">
       <disp-box v-for="(item, i) in items" :key="i" :on-press="onPressLearnMore" :name="item.id+' '+item.title" :description="item.description" :onDelete="()=>onDelete(item)" :onScrollEnabled="(enable) => $refs.content.setScrollEnabled(enable)" />
       <view v-for="i in 9" :key="i" style="flex-grow: 1; flex-basis: 300; height: 1;margin-left: 2;margin-right: 2;" />
     </content-flex>
-  </nb-content>
+  </safe-area-view>
 </nb-container>
 </template>
 
 <script>
+import {SafeAreaView} from 'react-navigation'
 import ContentFlex from "../components/ContentFlex";
 import DispBox from "../components/DispBox";
 import { Log } from "../dao/Log";
 
 export default {
   components: {
+    SafeAreaView,
     'content-flex' : ContentFlex,
     'disp-box' : DispBox
   },

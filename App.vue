@@ -60,6 +60,7 @@ function _handleAppStateChange(nextAppState) {
 
   }
 }
+_handleAppStateChange("initialize")
 AppState.removeEventListener('change', _handleAppStateChange);
 AppState.addEventListener('change', _handleAppStateChange);
 
