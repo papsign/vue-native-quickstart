@@ -1,6 +1,7 @@
 <template>
+<safe-area-view style="flex:1">
 <nb-container>
-  <nb-content class="sbcontent" :bounces="false">
+  <nb-content>
     <nb-list class="list">
         <nb-list-item 
             v-for="(data,i) in src"
@@ -24,14 +25,19 @@
     </nb-list>
   </nb-content>
 </nb-container>
+</safe-area-view>
 </template>
 
 <script>
+import {SafeAreaView} from 'react-navigation'
 export default {
   props: {
     navigation: {
       type: Object
     }
+  },
+  components: { 
+    SafeAreaView
   },
   data() {
     return {

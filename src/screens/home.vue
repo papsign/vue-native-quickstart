@@ -21,10 +21,12 @@
       </nb-button>
     </nb-right>
   </nb-header>
-  <content-flex :onFetchData="onFetchData" :loading="loading" ref="content">
-    <disp-box v-for="(item, i) in items" :key="i" :on-press="onPressLearnMore" :name="item.id+' '+item.title" :description="item.description" :onDelete="()=>onDelete(item)" :onScrollEnabled="(enable) => $refs.content.setScrollEnabled(enable)" />
-    <view v-for="i in 9" :key="i" style="flex-grow: 1; flex-basis: 300; height: 1;margin-left: 2;margin-right: 2;" />
-  </content-flex>
+  <nb-content>
+    <content-flex :onFetchData="onFetchData" :loading="loading" ref="content">
+      <disp-box v-for="(item, i) in items" :key="i" :on-press="onPressLearnMore" :name="item.id+' '+item.title" :description="item.description" :onDelete="()=>onDelete(item)" :onScrollEnabled="(enable) => $refs.content.setScrollEnabled(enable)" />
+      <view v-for="i in 9" :key="i" style="flex-grow: 1; flex-basis: 300; height: 1;margin-left: 2;margin-right: 2;" />
+    </content-flex>
+  </nb-content>
 </nb-container>
 </template>
 
