@@ -20,5 +20,11 @@ npm install --save react-navigation
 rm -rf node_modules/@react-navigation/native/node_modules/react-native-safe-area-view/.git
 rm -rf node_modules/react-native-safe-area-view/.git
 react-native link
-rsync -aP --exclude=.git --exclude=create.sh --exclude=$1 * $1
+mv ./App.vue ./$1
+mv ./src ./$1
+mv ./native-base-theme ./$1
+mv ./rn-cli.config.js ./$1
+mv ./tsconfig.json ./$1
+mv ./vueTransformerPlugin.js ./$1
+mv ./metro.config.js ./$1
 rm $1/App.js
