@@ -4,7 +4,7 @@
 
 <script>
 import React from "react";
-import { AppState , NativeModules } from 'react-native';
+import { AppState , Platform , NativeModules } from 'react-native';
 import Vue from "vue-native-core";
 import { VueNativeBase } from "native-base";
 
@@ -17,11 +17,13 @@ import DefaultLayout from "./src/layouts/default";
 Vue.use(VueNativeBase);
 
 //inject locales
-let locale = 'en'
-if (NativeModules.I18nManager.localeIdentifier) {
-  const i18nLocale = NativeModules.I18nManager.localeIdentifier;
-  locale = i18nLocale.split('_')[0];
+let langRegionLocale = "en_US";
+if (Platform.OS === "android") {
+  langRegionLocale = NativeModules.I18nManager.localeIdentifier || "en_US";
+} else if (Platform.OS === "ios") {
+  langRegionLocale = NativeModules.SettingsManager.settings.AppleLocale || "en_US";
 }
+let locale = langRegionLocale.substring(0, 2);
 var i18n = require("i18n-js");
 import { languages , defaultLocale } from './src/locales/index.js'
 i18n.locale = locale;
