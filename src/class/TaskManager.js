@@ -4,6 +4,10 @@ export class TaskManager {
         this.promises = []
     }
 
+    isRunning(){
+        return (this.promises.length != 0)
+    }
+
     stop(){
         this.promises = []
     }

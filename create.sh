@@ -10,6 +10,8 @@ npm install --save vue-native-core vue-native-helper
 npm install --savedev vue-native-scripts
 npm add @babel/runtime
 npm install
+npm install --save axios
+npm install --save vue-axios
 npm install --save vue-native-router
 npm install --save native-base
 npm install --save react-native-gesture-handler

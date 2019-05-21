@@ -13,7 +13,10 @@ import { TaskManager } from "./src/class/TaskManager";
 
 import DefaultLayout from "./src/layouts/default";
 
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
 Vue.use(VueNativeBase);
 
 //inject locales

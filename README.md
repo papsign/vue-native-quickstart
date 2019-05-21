@@ -6,6 +6,7 @@
 - Native Base (with added configurable custom theme)
 - Stack Navigation (react-navigation 3.0)
 - Sqlite database (sqlite-storage)
+- Axios https request
 
 ## Install 
 `sh create.sh <ProjectName>`
@@ -30,6 +31,7 @@ cd android
 {
   "dependencies": {
     "@types/react-native-sqlite-storage": "^3.3.1",
+    "axios": "^0.18.0",
     "i18n-js": "^3.2.2",
     "native-base": "^2.12.1",
     "react": "16.8.3",
@@ -37,6 +39,7 @@ cd android
     "react-native-gesture-handler": "^1.2.1",
     "react-native-sqlite-storage": "^3.3.10",
     "react-navigation": "^3.9.1",
+    "vue-axios": "^2.1.4",
     "vue-native-core": "0.0.8",
     "vue-native-helper": "0.0.11",
     "vue-native-router": "0.0.1-alpha.3",

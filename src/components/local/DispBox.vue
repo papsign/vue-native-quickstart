@@ -20,9 +20,8 @@
 </template>
 
 <script>
-import Swipe from "../components/Swipe";
+import Swipe from "../generic/Swipe";
 
-function _notnull(){}
 export default {
     components: {
       'swipe' : Swipe,
@@ -33,15 +32,15 @@ export default {
         description: String,
         onDelete: {
             type: Function,
-            default: _notnull
+            default: ()=>{}
         },
         onPress: {
             type: Function,
-            default: _notnull
+            default: ()=>{}
         },
         onScrollEnabled: {
             type: Function,
-            default: _notnull
+            default: ()=>{}
         },
     },
     data() {

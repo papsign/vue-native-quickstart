@@ -9,7 +9,6 @@
 
 <script>
 import { Dimensions } from 'react-native'
-function _notnull(){}
 export default {
     props: {
       loading: {
@@ -18,7 +17,7 @@ export default {
       },
       onFetchData: {
           type: Function,
-          default: _notnull
+          default: ()=>{}
       },
     },
     data() {

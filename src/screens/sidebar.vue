@@ -50,7 +50,12 @@ export default {
           {
               name: this.$t('informations'),
               route: "Infos",
-              icon: "information-circle-outline",
+              icon: "md-information-circle",
+          },
+          {
+              name: this.$t('streamlist'),
+              route: "StreamList",
+              icon: "md-open",
           },
       ],
     }

@@ -3,6 +3,10 @@
 import color from "color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
+import { StyleProvider } from "native-base";
+import React, { Component } from "react";
+
+import getTheme from "../../native-base-theme/components";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -11,7 +15,7 @@ const platformStyle = undefined;
 const isIphoneX =
   platform === "ios" && (deviceHeight === 812 || deviceWidth === 812 || deviceHeight === 896 || deviceWidth === 896);
 
-export default {
+const theme = {
   platformStyle,
   platform,
 
@@ -289,3 +293,13 @@ export default {
     }
   }
 };
+
+export default class Theme extends Component {
+    render() {
+        return (
+            <StyleProvider style={getTheme(theme)}>
+            {this.props.children}
+            </StyleProvider>  
+        )
+    }
+}

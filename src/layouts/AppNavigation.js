@@ -1,12 +1,21 @@
-import { createStackNavigator , createAppContainer } from "react-navigation";
-import { Drawer } from "./Drawer";
-import Routes from "./Routes";
+import { createDrawerNavigator, createStackNavigator , createAppContainer } from "react-navigation";
+import { SideBar , DrawerRoutes , NavigationRoutes } from "./Routes";
+import React from 'react';
 
-Routes.Drawer = Drawer;
-const Navigator = createStackNavigator(
-  Routes,
+const Drawer = createDrawerNavigator(
+  DrawerRoutes,
   {
-    initialRouteName: "Drawer",
+    drawerBackgroundColor: 'transparent',
+    contentComponent: props => <SideBar {...props} />
+  }
+);
+NavigationRoutes.Drawer = Drawer
+
+
+const Navigator = createStackNavigator(
+  NavigationRoutes,
+  {
+    initialRouteName: 'Drawer',
     headerMode: "none"
   }
 );

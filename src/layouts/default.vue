@@ -8,11 +8,10 @@
 </template>
 
 <script>
-import SpinnerOverlay from './SpinnerOverlay';
 import { Root } from "native-base";
-
 import { AppNavigation } from "./AppNavigation";
-import Theme from "./Theme";
+import SpinnerOverlay from '../components/generic/SpinnerOverlay';
+import Theme from "../styles/theme";
 
 export default {
     props: {

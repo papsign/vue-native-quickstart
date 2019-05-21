@@ -56,17 +56,7 @@ export default {
   beforeMount(){
   },
   methods: {
-      startScan: async function() {
-          if (Platform.OS === 'android') {
-          }else{
-            this.navigation.navigate("CameraScan", {onResult : this.onResult});
-          }
-      },
-      onResult(data){
-          console.log("onResult : "+JSON.stringify(data));
-      },
       onPressLearnMore: function() {
-		this.startScan()
       }
   }
 }

@@ -20,7 +20,6 @@
 </template>
 
 <script>
-function _notnull(){}
 export default {
     props: {
         leftOpenValue: {
@@ -37,7 +36,7 @@ export default {
         },
         setScrollEnabled: {
             type: Function,
-            default: _notnull
+            default: ()=>{}
         },
     },
     mounted(){
