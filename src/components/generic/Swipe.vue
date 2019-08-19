@@ -56,12 +56,14 @@ export default {
                 if(this.$slots.default[i].props && this.$slots.default[i].props.dataSlot === "left")
                 return this.$slots.default[i]
             }
+            return this.$slots['left']
         },
         getSwipeRight: function() {
             for(let i= 0; i<this.$slots.default.length; i++){
                 if(this.$slots.default[i].props && this.$slots.default[i].props.dataSlot === "right")
                 return this.$slots.default[i]
             }
+            return this.$slots['right']
         },
         getSwipeBody: function() {
             for(let i= 0; i<this.$slots.default.length; i++){
