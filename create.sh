@@ -18,7 +18,7 @@ npm install --save react-native-gesture-handler
 npm install --save i18n-js
 npm install --save react-native-sqlite-storage
 npm install --save @types/react-native-sqlite-storage
-npm install --save react-navigation
+npm install --save react-navigation@3.4.1
 npm install --save jetifier
 npx jetify
 rm -rf node_modules/@react-navigation/native/node_modules/react-native-safe-area-view/.git
